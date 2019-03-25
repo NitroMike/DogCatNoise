@@ -2,9 +2,9 @@ package com.ginjaninja.dogcatnoisey;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-//hey logan look at this
+//attempt 2
 public class CatNoisePage extends AppCompatActivity {
-//This is Logan's thingy
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
