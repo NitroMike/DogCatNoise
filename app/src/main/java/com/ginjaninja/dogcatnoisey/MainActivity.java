@@ -2,9 +2,8 @@ package com.ginjaninja.dogcatnoisey;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
+//This is Michael's page
 public class MainActivity extends AppCompatActivity {
-//ddf
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
