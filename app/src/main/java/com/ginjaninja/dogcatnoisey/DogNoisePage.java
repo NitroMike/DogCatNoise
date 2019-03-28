@@ -2,7 +2,7 @@ package com.ginjaninja.dogcatnoisey;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
+//This is Joe's page
 public class DogNoisePage extends AppCompatActivity {
 
     @Override
