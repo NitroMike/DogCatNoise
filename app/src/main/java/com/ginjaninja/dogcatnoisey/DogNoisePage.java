@@ -1,10 +1,13 @@
 package com.ginjaninja.dogcatnoisey;
 
 import android.media.MediaPlayer;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import java.util.Random;
 
 //This is Joe's page
 public class DogNoisePage extends AppCompatActivity {
@@ -14,15 +17,35 @@ public class DogNoisePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dog_noise_page);
 
+        final int random = new Random().nextInt(7) + 1; // [0, 7] => [1, 8]
+
         final MediaPlayer dogBarkMP = MediaPlayer.create(this, R.raw.dogbark);
+
+        final MediaPlayer wolfhowlMP = MediaPlayer.create(this, R.raw.wolfhowling);
 
         Button playDogBark = (Button) this.findViewById(R.id.dogBark);
 
-        playDogBark.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dogBarkMP.start();
-            }
-        });
+        if (random == 7)
+        {
+            playDogBark.setBackgroundResource(R.drawable.alphamalewolf);
+
+            playDogBark.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    wolfhowlMP.start();
+                }
+            });
+        }
+        else
+        {
+            playDogBark.setBackgroundResource(R.drawable.loud_dog);
+
+            playDogBark.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dogBarkMP.start();
+                }
+            });
+        }
     }
 }
