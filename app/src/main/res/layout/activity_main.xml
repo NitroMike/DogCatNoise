@@ -29,6 +29,7 @@
         android:layout_marginTop="128dp"
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
+        android:onClick="onLDClick"
         app:layout_constraintBottom_toBottomOf="@+id/quiet_Dog"
         app:layout_constraintEnd_toStartOf="@+id/quiet_Dog"
         app:layout_constraintHorizontal_bias="0.5"

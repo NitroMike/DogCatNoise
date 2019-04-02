@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.Random;
+
 //This is Joe's page
 public class DogNoisePage extends AppCompatActivity {
 
@@ -13,6 +15,8 @@ public class DogNoisePage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dog_noise_page);
+
+        final int random = new Random().nextInt(8) + 1; // [0, 6] => [1, 7]
 
         final MediaPlayer dogBarkMP = MediaPlayer.create(this, R.raw.dogbark);
 
@@ -24,5 +28,17 @@ public class DogNoisePage extends AppCompatActivity {
                 dogBarkMP.start();
             }
         });
+
+        if (random == 7)
+        {
+            playDogBark.setBackgroundResource(R.drawable.alphamalewolf);
+
+            playDogBark.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dogBarkMP.start();
+                }
+            });
+        }
     }
 }
