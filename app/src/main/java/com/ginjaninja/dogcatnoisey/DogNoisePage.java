@@ -14,7 +14,7 @@ public class DogNoisePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dog_noise_page);
 
-        final MediaPlayer dogBarkMP = MediaPlayer.create(this, res.aud.dogBark);
+        final MediaPlayer dogBarkMP = MediaPlayer.create(this, R.raw.dogbark);
 
         Button playDogBark = (Button) this.findViewById(R.id.dogBark);
 
