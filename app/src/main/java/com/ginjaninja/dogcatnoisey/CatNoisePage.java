@@ -24,6 +24,7 @@ public class CatNoisePage extends AppCompatActivity {
                 catmeow.start();
             }
         });
+
     }
 }
 
