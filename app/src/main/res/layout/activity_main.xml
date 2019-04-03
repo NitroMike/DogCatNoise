@@ -5,7 +5,7 @@
     android:id="@+id/BackGround"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/CatDogBackGround"
+    android:background="@drawable/cat_dog_background"
     tools:context=".MainActivity">
 
 
@@ -32,6 +32,7 @@
         android:layout_height="273dp"
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
+        android:onClick="onQCClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

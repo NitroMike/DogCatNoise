@@ -18,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(myIntent);
     }
 
-    public void onLDClick(View view) {
-        Intent myIntent = new Intent(getBaseContext(), DogNoisePage.class);
+    public void onQCClick(View view) {
+        Intent myIntent = new Intent(getBaseContext(), CatQuietPage.class);
         startActivity(myIntent);
     }
 }
