@@ -14,14 +14,14 @@ public class CatNoisePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cat_noise_page);
 
-        final MediaPlayer catmeow = MediaPlayer.create(this, R.raw.cat_meow);
+        final MediaPlayer cat_meow = MediaPlayer.create(this, R.raw.cat_meow);
 
         Button MeowCatButton = this.findViewById(R.id.MeowCatButton);
 
         MeowCatButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                catmeow.start();
+                cat_meow.start();
             }
         });
 
