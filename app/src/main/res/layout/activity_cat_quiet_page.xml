@@ -19,4 +19,17 @@
         tools:fontFamily="sans-serif-medium"
         tools:textSize="30sp" />
 
+    <Button
+        android:id="@+id/cat_button"
+        android:layout_width="285dp"
+        android:layout_height="225dp"
+        android:layout_marginTop="305dp"
+        android:layout_marginBottom="226dp"
+        android:background="@drawable/cat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </android.support.constraint.ConstraintLayout>
