@@ -19,7 +19,7 @@ public class CatQuietPage extends AppCompatActivity {
 
                     Intent toy = new Intent(CatQuietPage.this,CatNoisePage.class);
 
-                init();
+                    startActivity(toy);
             }
         });
     }
@@ -28,5 +28,8 @@ public class CatQuietPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cat_quiet_page);
+
+        init();
+
     }
 }

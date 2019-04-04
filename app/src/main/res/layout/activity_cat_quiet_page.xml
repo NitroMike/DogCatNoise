@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:background="@drawable/cat_pages_background"
+    android:background="@drawable/cat_pages_background"
     tools:context=".CatQuietPage">
 
     <TextView
@@ -12,12 +12,14 @@
         android:layout_height="44dp"
         android:text="@string/cat"
         android:textAllCaps="false"
+        android:textColorLink="@android:color/background_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.297"
+        app:layout_constraintVertical_bias="0.291"
         tools:fontFamily="sans-serif-medium"
+        tools:textColorLink="@android:color/holo_green_dark"
         tools:textSize="30sp" />
 
     <Button
