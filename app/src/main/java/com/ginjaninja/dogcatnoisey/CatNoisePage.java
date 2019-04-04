@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.Random;
+
 public class CatNoisePage extends AppCompatActivity {
 
     @Override
@@ -25,6 +27,16 @@ public class CatNoisePage extends AppCompatActivity {
             }
         });
 
+        final Button button = findViewById(R.id.MeowCatButton);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Random r = new Random();
+                int rawrtest = r.nextInt(20 - 0) + 0;
+            }
+        });
+
+
     }
+
 }
 
