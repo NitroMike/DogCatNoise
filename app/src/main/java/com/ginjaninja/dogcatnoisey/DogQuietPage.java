@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-//this is karim's page
+//this is Karim's page
 public class DogQuietPage extends AppCompatActivity {
 
     @Override
