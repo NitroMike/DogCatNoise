@@ -31,4 +31,8 @@ public class DogQuietPage extends AppCompatActivity {
         Intent findNoise = new Intent(getBaseContext(),DogNoisePage.class);
         startActivity(findNoise);
     }
+    public void onQCClick(View view) {
+        Intent goBack = new Intent(getBaseContext(),MainActivity.class);
+        startActivity(goBack);
+    }
 }
