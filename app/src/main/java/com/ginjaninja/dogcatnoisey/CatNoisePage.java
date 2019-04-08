@@ -1,17 +1,29 @@
 package com.ginjaninja.dogcatnoisey;
 //Logan
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import java.util.Random;
-
 public class CatNoisePage extends AppCompatActivity {
 
-    @Override
+    public Button change_page;
+    public void changing_now() {
+        change_page = findViewById(R.id.MeowCatButton);
+        change_page.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent switch_now = new Intent(CatNoisePage.this, MainActivity.class);
+                startActivity(switch_now);
+            }
+        });
+    }
+
+
+        @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cat_noise_page);
@@ -27,13 +39,7 @@ public class CatNoisePage extends AppCompatActivity {
             }
         });
 
-        final Button button = findViewById(R.id.MeowCatButton);
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Random r = new Random();
-                int rawrtest = r.nextInt(20 - 0) + 0;
-            }
-        });
+        changing_now();
 
 
     }
