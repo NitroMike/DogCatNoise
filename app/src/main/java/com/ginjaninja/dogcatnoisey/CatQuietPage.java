@@ -10,6 +10,7 @@ import android.widget.Button;
 public class CatQuietPage extends AppCompatActivity {
 
     public Button cat_button;
+    public Button cat_button2;
 
     public void init() {
         cat_button = (Button) findViewById(R.id.cat_button);
