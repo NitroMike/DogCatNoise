@@ -1,5 +1,6 @@
 package com.ginjaninja.dogcatnoisey;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
@@ -23,10 +24,11 @@ public class DogNoisePage extends AppCompatActivity {
 
         final MediaPlayer wolfhowlMP = MediaPlayer.create(this, R.raw.wolfhowling);
 
-        Button playDogBark = (Button) this.findViewById(R.id.dogBark);
+        Button playDogBark = this.findViewById(R.id.dogBark);
 
-        if (random == 7)
-        {
+        Button backArrow = this.findViewById(R.id.backArrow);
+
+        if (random == 7) {
             playDogBark.setBackgroundResource(R.drawable.alphamalewolf);
 
             playDogBark.setOnClickListener(new View.OnClickListener() {
@@ -35,9 +37,7 @@ public class DogNoisePage extends AppCompatActivity {
                     wolfhowlMP.start();
                 }
             });
-        }
-        else
-        {
+        } else {
             playDogBark.setBackgroundResource(R.drawable.loud_dog);
 
             playDogBark.setOnClickListener(new View.OnClickListener() {
@@ -47,5 +47,14 @@ public class DogNoisePage extends AppCompatActivity {
                 }
             });
         }
+        backArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dogBarkMP.stop();
+                wolfhowlMP.stop();
+                Intent goBack = new Intent(getBaseContext(), DogQuietPage.class);
+                startActivity(goBack);
+            }
+        });
     }
 }
