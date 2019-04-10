@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Dog Cat Noisey</string>
     <string name="cat">Pet Me Please</string>
+    <string name="meow_to_bark">Do you rather dogs?  Click here then</string>
 </resources>
