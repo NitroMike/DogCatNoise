@@ -32,5 +32,7 @@ public class CatQuietPage extends AppCompatActivity {
         Intent cat = new Intent(CatQuietPage.this,CatNoisePage.class);
 
         startActivity(cat);
+
+
     }
 }

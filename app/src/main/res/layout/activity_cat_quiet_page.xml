@@ -39,11 +39,14 @@
         android:layout_marginBottom="100dp"
         android:background="@drawable/backarrow"
         android:onClick="To_Dog_Page"
+        android:text="@string/dogo"
+        android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.965"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        tools:textColor="@color/colorPrimary" />
 
 </android.support.constraint.ConstraintLayout>
