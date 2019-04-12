@@ -30,7 +30,7 @@ public class CatNoisePage extends AppCompatActivity {
         catHissMP.stop();
         catMeowMP.stop();
         if (random == 4) {
-            if(backgroundname != "angry_cat")
+            if(backgroundname.equals("loud_cat"))
             {
             playCatMeow.setBackgroundResource(R.drawable.angry_cat);
             backgroundname = "angry_cat";
@@ -38,7 +38,7 @@ public class CatNoisePage extends AppCompatActivity {
             catHissMP.start();
         }
         else {
-            if(backgroundname != "loud_cat") {
+            if(backgroundname.equals("angry_cat")) {
                 playCatMeow.setBackgroundResource(R.drawable.loud_cat);
                 backgroundname = "loud_cat";
             }
