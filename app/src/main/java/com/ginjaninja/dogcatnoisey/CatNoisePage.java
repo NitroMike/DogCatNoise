@@ -12,58 +12,52 @@ import java.util.Random;
 //Logan's responsibility
 public class CatNoisePage extends AppCompatActivity {
 
+    int random = new Random().nextInt(7) + 1; // [0, 6] => [1, 7]
+    final MediaPlayer catMeowMP = MediaPlayer.create(this, R.raw.cat_meow);
+    final MediaPlayer catHissMP = MediaPlayer.create(this, R.raw.cat_earrape);
+    String backgroundname = "loud_cat";
+
+    Button playCatMeow = this.findViewById(R.id.MeowCatButton);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cat_noise_page);
+    }
 
-        final int random = new Random().nextInt(7) + 1; // [0, 7] => [1, 8]
-        final MediaPlayer catMeowMP = MediaPlayer.create(this, R.raw.cat_meow);
-        final MediaPlayer catHissMP = MediaPlayer.create(this, R.raw.cat_earrape);
-
-        Button playCatMeow = this.findViewById(R.id.MeowCatButton);
-        Button backArrow = this.findViewById(R.id.backbutton);
-        Button toLoudDog = this.findViewById(R.id.meow_woof_btn);
-
-        if (random == 7) {
+    public void Hiss_Rando(View view) {
+        random = new Random().nextInt(7) + 1;
+        catHissMP.stop();
+        catMeowMP.stop();
+        if (random == 4) {
+            if(backgroundname != "angry_cat")
+            {
             playCatMeow.setBackgroundResource(R.drawable.angry_cat);
-
-            playCatMeow.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    catHissMP.start();
-                }
-            });
+            backgroundname = "angry_cat";
+            }
+            catHissMP.start();
         }
         else {
-            playCatMeow.setBackgroundResource(R.drawable.loud_cat);
-
-            playCatMeow.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    catMeowMP.start();
-                }
-            });
+            if(backgroundname != "loud_cat") {
+                playCatMeow.setBackgroundResource(R.drawable.loud_cat);
+                backgroundname = "loud_cat";
+            }
+            catMeowMP.start();
         }
-        backArrow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                catMeowMP.stop();
-                catHissMP.stop();
-                Intent goBack = new Intent(getBaseContext(), CatQuietPage.class);
-                startActivity(goBack);
-            }
-        });
-        toLoudDog.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                catMeowMP.stop();
-                catHissMP.stop();
-                Intent goBack = new Intent(getBaseContext(), DogNoisePage.class);
-                startActivity(goBack);
-            }
-        });
+    }
 
+    public void go_backwards(View view) {
+        catMeowMP.stop();
+        catHissMP.stop();
+        Intent goBack = new Intent(getBaseContext(), CatQuietPage.class);
+        startActivity(goBack);
+    }
+
+    public void goto_dog(View view) {
+        catMeowMP.stop();
+        catHissMP.stop();
+        Intent goBack = new Intent(getBaseContext(), DogNoisePage.class);
+        startActivity(goBack);
     }
 }
 
