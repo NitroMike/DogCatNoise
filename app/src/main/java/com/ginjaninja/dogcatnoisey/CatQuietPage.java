@@ -22,14 +22,14 @@ public class CatQuietPage extends AppCompatActivity {
 
     public void To_Dog_Page(View view) {
 
-        Intent dog = new Intent(CatQuietPage.this,DogQuietPage.class);
+        Intent dog = new Intent(getBaseContext(),DogQuietPage.class);
 
         startActivity(dog);
     }
 
     public void To_Cat_Page(View view) {
 
-        Intent cat = new Intent(CatQuietPage.this,CatNoisePage.class);
+        Intent cat = new Intent(getBaseContext(),CatNoisePage.class);
 
         startActivity(cat);
 
