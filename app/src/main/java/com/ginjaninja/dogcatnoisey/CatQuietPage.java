@@ -15,9 +15,6 @@ public class CatQuietPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cat_quiet_page);
-
-
-
     }
 
     public void To_Dog_Page(View view) {
@@ -30,7 +27,6 @@ public class CatQuietPage extends AppCompatActivity {
     public void To_Cat_Page(View view) {
 
         Intent cat = new Intent(getBaseContext(),CatNoisePage.class);
-
         startActivity(cat);
 
 

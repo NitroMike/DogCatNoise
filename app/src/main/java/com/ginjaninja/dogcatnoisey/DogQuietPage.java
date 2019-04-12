@@ -36,7 +36,7 @@ public class DogQuietPage extends AppCompatActivity {
         startActivity(goBack);
     }
     public void onQEClick(View view) {
-        Intent goCat = new Intent(getBaseContext(),MainActivity.class);
+        Intent goCat = new Intent(getBaseContext(),CatQuietPage.class);
         startActivity(goCat);
     }
 
