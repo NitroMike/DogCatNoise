@@ -9,14 +9,15 @@
 
     <Button
         android:id="@+id/backbutton"
-        android:layout_width="98dp"
-        android:layout_height="104dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="596dp"
-        android:layout_marginEnd="260dp"
-        android:layout_marginRight="260dp"
-        android:layout_marginBottom="100dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="546dp"
+        android:layout_marginEnd="255dp"
+        android:layout_marginRight="255dp"
+        android:layout_marginBottom="85dp"
         android:background="@drawable/backarrow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
