@@ -13,7 +13,20 @@ public class DogQuietPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dog_quiet_page);
     }
-
+//    public Button clickbutton1;
+//
+//    public void init(){
+//        clickbutton1= (Button)findViewById(R.id.button);
+//        clickbutton1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                Intent click = new Intent(DogQuietPage.this, DogNoisePage.class);
+//
+//                startActivity(click);
+//            }
+//        });
+//    }
     public void onQDClick(View view) {
         Intent findNoise = new Intent(getBaseContext(),DogNoisePage.class);
         startActivity(findNoise);
@@ -23,7 +36,7 @@ public class DogQuietPage extends AppCompatActivity {
         startActivity(goBack);
     }
     public void onQEClick(View view) {
-        Intent goCat = new Intent(getBaseContext(),CatQuietPage.class);
+        Intent goCat = new Intent(getBaseContext(),MainActivity.class);
         startActivity(goCat);
     }
 
