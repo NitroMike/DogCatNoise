@@ -24,8 +24,10 @@ public class CatNoisePage extends AppCompatActivity {
         final MediaPlayer cathiss = MediaPlayer.create(this, R.raw.cat_earrape);
 
         Button playcatmeow = this.findViewById(R.id.MeowCatButton);
-
         Button backArrow =  this.findViewById(R.id.backbutton);
+
+        final Intent goBack = new Intent(getBaseContext(), DogNoisePage.class);
+
 
         if (random == 7) {
             playcatmeow.setBackgroundResource(R.drawable.angry_cat);
@@ -51,7 +53,6 @@ public class CatNoisePage extends AppCompatActivity {
             public void onClick(View v) {
                 catmeow.stop();
                 cathiss.stop();
-                Intent goBack = new Intent(getBaseContext(), DogNoisePage.class);
                 startActivity(goBack);
             }
         });
