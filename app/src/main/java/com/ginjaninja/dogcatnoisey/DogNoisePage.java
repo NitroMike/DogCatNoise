@@ -26,7 +26,7 @@ public class DogNoisePage extends AppCompatActivity {
 
         Button playDogBark = this.findViewById(R.id.dogBark);
 
-        Button backArrow =  this.findViewById(R.id.backArrow);
+        Button backArrow =  this.findViewById(R.id.backbutton);
 
         if (random == 7) {
             playDogBark.setBackgroundResource(R.drawable.alphamalewolf);
