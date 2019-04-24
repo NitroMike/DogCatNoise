@@ -19,8 +19,8 @@ public class DogQuietPage extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent goBack = new Intent(getBaseContext(), DogNoisePage.class);
-                startActivity(goBack);
+                Intent goBack2 = new Intent(getBaseContext(), DogNoisePage.class);
+                startActivity(goBack2);
             }
         });
     }
