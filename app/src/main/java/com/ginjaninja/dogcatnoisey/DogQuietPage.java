@@ -9,6 +9,7 @@ import android.widget.Button;
 //this is Karim's page
 public class DogQuietPage extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,28 +20,15 @@ public class DogQuietPage extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent goBack2 = new Intent(getBaseContext(), DogNoisePage.class);
-                startActivity(goBack2);
+                Intent goDogNoise = new Intent(DogQuietPage.this, DogNoisePage.class);
+                startActivity(goDogNoise);
             }
         });
     }
-//    public Button clickbutton1;
-//
-//    public void init(){
-//        clickbutton1= (Button)findViewById(R.id.button);
-//        clickbutton1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                Intent click = new Intent(DogQuietPage.this, DogNoisePage.class);
-//
-//                startActivity(click);
-//            }
-//        });
-//    }
-//    public void onQDClick(View view) {
-//        Intent findNoise = new Intent(getBaseContext(),DogNoisePage.class);
-//        startActivity(findNoise);
+
+//    public void onQFClick(View view) {
+//        Intent findDogNoise = new Intent(getBaseContext(),DogNoisePage.class);
+//        startActivity(findDogNoise);
 //    }
 
 
@@ -48,12 +36,12 @@ public class DogQuietPage extends AppCompatActivity {
 
 
     public void onQCClick(View view) {
-        Intent goBack = new Intent(getBaseContext(),MainActivity.class);
-        startActivity(goBack);
+        Intent goBackHome = new Intent(getBaseContext(),MainActivity.class);
+        startActivity(goBackHome);
     }
     public void onQEClick(View view) {
-        Intent goCat = new Intent(getBaseContext(),CatQuietPage.class);
-        startActivity(goCat);
+        Intent goFindCat = new Intent(getBaseContext(),CatQuietPage.class);
+        startActivity(goFindCat);
     }
 
 }
