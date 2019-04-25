@@ -26,9 +26,6 @@ public class CatNoisePage extends AppCompatActivity {
         Button playcatmeow = this.findViewById(R.id.MeowCatButton);
         Button backArrow =  this.findViewById(R.id.backbutton);
 
-        final Intent goBack = new Intent(getBaseContext(), DogNoisePage.class);
-
-
         if (random == 7) {
             playcatmeow.setBackgroundResource(R.drawable.angry_cat);
 
@@ -51,6 +48,7 @@ public class CatNoisePage extends AppCompatActivity {
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                final Intent goBack = new Intent(getBaseContext(), DogNoisePage.class);
                 catmeow.stop();
                 cathiss.stop();
                 startActivity(goBack);
