@@ -8,8 +8,6 @@ import android.widget.Button;
 
 //this is Karim's page
 public class DogQuietPage extends AppCompatActivity {
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,10 +18,19 @@ public class DogQuietPage extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent goDogNoise = new Intent(DogQuietPage.this, DogNoisePage.class);
+                Intent goDogNoise = new Intent(getBaseContext(), DogNoisePage.class);
                 startActivity(goDogNoise);
             }
         });
+
+        Button button4 = this.findViewById(R.id.button4);
+
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent questDogNoise = new Intent(getBaseContext(), DogNoisePage.class);
+                startActivity(questDogNoise);
+            }});
     }
 
 //    public void onQFClick(View view) {
@@ -31,10 +38,10 @@ public class DogQuietPage extends AppCompatActivity {
 //        startActivity(findDogNoise);
 //    }
 
-
-
-
-
+    public void onQWClick(View view) {
+        Intent goToTheNoise = new Intent(getBaseContext(), DogNoisePage.class);
+        startActivity(goToTheNoise);
+    }
     public void onQCClick(View view) {
         Intent goBackHome = new Intent(getBaseContext(),MainActivity.class);
         startActivity(goBackHome);
