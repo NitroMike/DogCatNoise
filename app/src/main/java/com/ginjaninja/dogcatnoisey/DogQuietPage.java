@@ -23,14 +23,7 @@ public class DogQuietPage extends AppCompatActivity {
             }
         });
 
-        Button button4 = this.findViewById(R.id.button4);
 
-        button4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent questDogNoise = new Intent(getBaseContext(), DogNoisePage.class);
-                startActivity(questDogNoise);
-            }});
     }
 
 //    public void onQFClick(View view) {
