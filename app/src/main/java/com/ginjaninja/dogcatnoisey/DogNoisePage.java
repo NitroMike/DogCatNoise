@@ -2,7 +2,6 @@ package com.ginjaninja.dogcatnoisey;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
-import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -27,6 +26,8 @@ public class DogNoisePage extends AppCompatActivity {
         Button playDogBark = this.findViewById(R.id.dogBark);
 
         Button backArrow =  this.findViewById(R.id.backbutton);
+
+        Button gotocat =  this.findViewById(R.id.gotocat);
 
         if (random == 7) {
             playDogBark.setBackgroundResource(R.drawable.alphamalewolf);
@@ -53,6 +54,14 @@ public class DogNoisePage extends AppCompatActivity {
                 dogBarkMP.stop();
                 wolfhowlMP.stop();
                 Intent goBack = new Intent(getBaseContext(), DogQuietPage.class);
+                startActivity(goBack);
+            }
+        });
+
+        gotocat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goBack = new Intent(getBaseContext(), CatNoisePage.class);
                 startActivity(goBack);
             }
         });

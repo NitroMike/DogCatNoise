@@ -24,7 +24,6 @@ public class CatNoisePage extends AppCompatActivity {
         final MediaPlayer cathiss = MediaPlayer.create(this, R.raw.cat_earrape);
 
         Button playcatmeow = this.findViewById(R.id.MeowCatButton);
-
         Button backArrow =  this.findViewById(R.id.backbutton);
 
         if (random == 7) {
@@ -49,9 +48,9 @@ public class CatNoisePage extends AppCompatActivity {
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                final Intent goBack = new Intent(getBaseContext(), DogNoisePage.class);
                 catmeow.stop();
                 cathiss.stop();
-                Intent goBack = new Intent(getBaseContext(), DogNoisePage.class);
                 startActivity(goBack);
             }
         });

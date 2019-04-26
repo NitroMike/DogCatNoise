@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DogNoisePage"
+    tools:context="DogNoisePage"
     android:background="@drawable/dog_pages_background">
 
     <Button
@@ -27,6 +27,17 @@
         android:layout_marginBottom="85dp"
         android:background="@drawable/backarrow"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/gotocat"
+        android:layout_width="114dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginLeft="128dp"
+        android:layout_marginTop="128dp"
+        android:text="Click here to go to cats!"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

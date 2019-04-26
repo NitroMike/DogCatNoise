@@ -4,40 +4,51 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 
 //this is Karim's page
 public class DogQuietPage extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dog_quiet_page);
+
+        Button button =  this.findViewById(R.id.button);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goDogNoise = new Intent(getBaseContext(), DogNoisePage.class);
+                startActivity(goDogNoise);
+            }
+        });
+
+        Button button4 = this.findViewById(R.id.button4);
+
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent questDogNoise = new Intent(getBaseContext(), DogNoisePage.class);
+                startActivity(questDogNoise);
+            }});
     }
-//    public Button clickbutton1;
-//
-//    public void init(){
-//        clickbutton1= (Button)findViewById(R.id.button);
-//        clickbutton1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                Intent click = new Intent(DogQuietPage.this, DogNoisePage.class);
-//
-//                startActivity(click);
-//            }
-//        });
+
+//    public void onQFClick(View view) {
+//        Intent findDogNoise = new Intent(getBaseContext(),DogNoisePage.class);
+//        startActivity(findDogNoise);
 //    }
-    public void onQDClick(View view) {
-        Intent findNoise = new Intent(getBaseContext(),DogNoisePage.class);
-        startActivity(findNoise);
+
+    public void onQWClick(View view) {
+        Intent goToTheNoise = new Intent(getBaseContext(), DogNoisePage.class);
+        startActivity(goToTheNoise);
     }
     public void onQCClick(View view) {
-        Intent goBack = new Intent(getBaseContext(),MainActivity.class);
-        startActivity(goBack);
+        Intent goBackHome = new Intent(getBaseContext(),MainActivity.class);
+        startActivity(goBackHome);
     }
     public void onQEClick(View view) {
-        Intent goCat = new Intent(getBaseContext(),CatQuietPage.class);
-        startActivity(goCat);
+        Intent goFindCat = new Intent(getBaseContext(),CatQuietPage.class);
+        startActivity(goFindCat);
     }
 
 }
