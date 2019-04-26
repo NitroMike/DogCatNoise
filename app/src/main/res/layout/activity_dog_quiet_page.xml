@@ -9,16 +9,14 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="200dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginRight="55dp"
         android:background="@drawable/not_loud_dog"
-        android:onClick="onQDClick"
+        android:onClick="onQWClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,14 +28,9 @@
         android:layout_height="100dp"
         android:layout_marginStart="56dp"
         android:layout_marginLeft="56dp"
-        android:layout_marginEnd="255dp"
-        android:layout_marginRight="255dp"
         android:layout_marginBottom="85dp"
         android:background="@drawable/backarrow"
-        android:onClick="onQCClick"
-        android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -47,11 +40,8 @@
         android:layout_marginStart="56dp"
         android:layout_marginLeft="56dp"
         android:layout_marginTop="93dp"
-        android:layout_marginEnd="264dp"
-        android:layout_marginRight="264dp"
         android:onClick="onQEClick"
         android:text="Cat Page"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
