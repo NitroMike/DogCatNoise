@@ -30,6 +30,7 @@
         android:layout_marginLeft="56dp"
         android:layout_marginBottom="85dp"
         android:background="@drawable/backarrow"
+        android:onClick="onQCClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

@@ -24,9 +24,9 @@ public class DogNoisePage extends AppCompatActivity {
         final MediaPlayer wolfhowlMP = MediaPlayer.create(this, R.raw.wolfhowling);
 
         Button playDogBark = this.findViewById(R.id.dogBark);
-        Button backArrow =  this.findViewById(R.id.backArrow);
+//        Button backArrow =  this.findViewById(R.id.backArrow);
         Button gotocat =  this.findViewById(R.id.gotocat);
-//      Button backArrow = (Button) findViewById(R.id.backArrow); This also works.
+      Button backArrow = (Button) findViewById(R.id.backArrow);
 
         if (random == 7) {
             playDogBark.setBackgroundResource(R.drawable.alphamalewolf);

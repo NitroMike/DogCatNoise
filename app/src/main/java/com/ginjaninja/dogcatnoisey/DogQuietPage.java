@@ -23,11 +23,11 @@ public class DogQuietPage extends AppCompatActivity {
         startActivity(goToTheNoise);
     }
     public void onQCClick(View view) {
-        Intent goBackHome = new Intent(getBaseContext(),MainActivity.class);
+        Intent goBackHome = new Intent(getBaseContext(), MainActivity.class);
         startActivity(goBackHome);
     }
     public void onQEClick(View view) {
-        Intent goFindCat = new Intent(getBaseContext(),CatQuietPage.class);
+        Intent goFindCat = new Intent(getBaseContext(), CatQuietPage.class);
         startActivity(goFindCat);
     }
 }
