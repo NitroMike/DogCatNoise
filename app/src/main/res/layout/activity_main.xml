@@ -24,7 +24,8 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/not_loud_dog" />
+        app:srcCompat="@drawable/not_loud_dog"
+        tools:ignore="ContentDescription" />
 
     <ImageButton
         android:id="@+id/quiet_cat"
@@ -38,5 +39,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quiet_Dog"
-        app:srcCompat="@drawable/loud_cat" />
+        app:srcCompat="@drawable/loud_cat"
+        tools:ignore="ContentDescription" />
+
 </android.support.constraint.ConstraintLayout>
